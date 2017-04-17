@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test CSS/HTML Check Site</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/test.css" rel="stylesheet">
+    <style type="text/css">
+     /* main CSS */
+     body {
+       font-size: 15pt;
+       font-family: "Helvetica Neue";
+     }
+
+     .main {
+       width:  500px;
+       height: 300px;
+       background-color: #0000cd;
+       border-radius: 15px;
+       float:right;
+     }
+
+     .side {
+       width:  300px;
+       height: 300px;
+       background-color :#4169e1;
+       border-radius: 15px;
+       float:right;
+     }
+
+
+     .button {
+       background-color :#0000cd;
+       display: inline-block;
+       padding: 10px 15px;
+       border-radius: 10px;
+       /* ボーダー transparent:ボーダーの色を透明にします*/
+       border: 1px solid transparent;
+       color: #FFFFFF;
+     }
+
+     .container {
+       width: 970px;
+       padding-right: 15px;
+       padding-left: 15px;
+       margin-right: auto;
+       margin-left: auto;
+     }
+
+     .sidebar {
+       top: 50px;        /* Navbar are */
+       width: 100px;
+       margin: 0;
+       padding: 0;
+       background-color: #ECF0F1;
+       height: 100%;     /* Full height */
+       position: fixed;  /* Make it stick, even on scroll */
+       overflow: auto;   /* Enable scrolling if the sidenav has too much content */
+     }
+
+     .sidebar li {
+       width: 100%;
+       padding: 10px 15px;
+     }
+
+     .sidebar li:hover {
+       background-color: #4CAF50;
+       color: white;
+     }
+
+     .sidebar ul {
+       list-style-type: none;
+     }
+ 
+     .sidebar a {
+       /* delete link underline */
+       text-decoration: none;
+     }
+
+     .contaier {
+       margin-top:  150px;
+       margin-left: 250px;
+       background-color :#8169e1;
+       width:  100%;     /* Full width */
+       height: 100%;     /* Full height */
+       position: fixed;  /* Make it stick, even on scroll */
+       overflow: auto;   /* Enable scrolling if the sidenav has too much content */
+     }
+
+     .navbar {
+       min-height: 50px;
+     }
+
+     .navbar-menu {
+       position: fixed;
+       list-style-type: none;
+       overflow: hidden;
+       width: 100%;
+       background-color: #003171;
+     }
+     
+     .navbar li {
+       float: left;
+     }
+     
+     .navbar a {
+       display: block;
+       color: white;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+     }
+     
+     .navbar a:hover:not(.active) {
+       background-color: #111;
+     }
+     
+     .navbar active {
+       background-color: #4CAF50;
+     }
+    </style>
+  </head>
+  <body>
+    <!-- navbar start -->
+    <div class="navbar">
+      <ul class="navbar-menu">
+	<div class ="container">
+	  <li><a href="#">home</a></li>
+	  <li><a href="#">about</a></li>
+	  <li><a href="#">link</a></li>
+	  <li><a href="#">contact</a></li>
+	</div>
+      </ul>
+    </div>
+    <!-- navbar end -->
+
+    <!-- sidebar start -->
+    <div class="sidebar">
+      <ul>
+	<li><a href="#">home</a></li>
+	<li><a href="#">about</a></li>
+	<li><a href="#">link</a></li>
+	<li><a href="#">contact</a></li>
+      </ul>
+    </div>
+    <!-- sidebar end -->
+
+    <!-- container start -->
+    <div class="contaier">
+      <div class="main">
+      </div>
+      <div class="side">
+      </div>
+      <div class="button">
+	Button
+      </div>
+      <div class="button">
+	Button
+      </div>
+    </div>
+    <!-- container end -->
+  </body>
+</html>
