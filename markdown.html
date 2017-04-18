@@ -1,33 +1,95 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>Markdown renderer</title>
-    <meta name="description" content="Markdown renderer">
+    <head>
+        <meta charset="utf-8">
 
-    <!-- bootstrap -->
-    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css" rel="stylesheet">
+        <title>Markdown renderer</title>
+        <meta name="description" content="Markdown renderer">
+	<meta http-equiv="x-ua-compatible" content="IE=9" > 
+	<meta http-equiv="x-ua-compatible" content="IE=EmulateIE9" > 
+        <!-- bootstrap -->
+        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<style type="text/css">
 
-    <!-- js libraries -->
-    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="js/marked.js"></script>
-    <script>
-     $(document).ready(function(){
-       var target = $("#markdown_content");
-       $.ajax({
-         url: target[0].attributes["src"].value,
-       }).success(function(data){
-         target.append(marked(data));
-       }).error(function(data){
-         target.append("This content failed to load.");
-       });
-     });
-    </script>
-  </head>
+	 .mycontainer {
+	   width: 900px;
+	   margin: auto;
+	 }
 
-  <body>
-    <!-- Content -->
-    <div id="markdown_content" src="./READ.md"> </div>
-  </body>
+
+	 .navibar {
+	   min-height: 40px;
+	   font-size: 14px;
+	   background-color:#5D9CEC;
+	 }
+
+	 .navibar-menu {
+	   position: fixed;
+	   list-style-type: none;
+	   overflow: hidden;
+	   width: 100%;
+	 }
+
+	 .navibar ul {
+	 }
+
+	 .navibar li {
+	   float: right;
+	 }
+
+	 .navibar a {
+	   display: block;
+	   color: white;
+	   text-align: center;
+	   padding: 10px 16px;
+	   text-decoration: none;
+	 }
+
+	 .navibar a:hover:not(.active) {
+	   background-color: #8bb8f1;
+	 }
+
+	 .navibar active {
+	   background-color: #4CAF50;
+	 }
+	</style>
+
+        <!-- js libraries -->
+        <script type="text/javascript" src="/js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="/js/marked.js"></script>
+        <script>
+            $(document).ready(function(){
+                var target = $("#markdown_content");
+
+                $.ajax({
+                    url: target[0].attributes["src"].value,
+                }).success(function(data){
+                    target.append(marked(data));
+                }).error(function(data){
+                    target.append("This content failed to load.");
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+      <!-- navbar start -->
+
+      <div class="navibar">
+	<ul class="navibar-menu" style="padding: 0px; right:15px">
+	  <div class="mycontainer">
+	    <li style="float:left;"><a href="">about</a></li>
+	    <li><a href="#">about</a></li>
+	    <li><a href="#">link</a></li>
+	    <li><a href="#"><span class="glyphicon glyphicon-search"></span> home</a></li>
+	  </div>
+	</ul>
+      </div>
+      <!-- navbar end -->
+
+      <!-- Content -->
+      <div class="mycontainer">
+	<div id="markdown_content" src="./test.md"> </div>
+      </div>
+    </body>
 </html>
