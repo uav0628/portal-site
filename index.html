@@ -2,89 +2,44 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Sample</title>
-    <!-- BootstrapのCSS読み込み -->
-    <link href="css/main.css" rel="stylesheet">
+
+    <title>Local Repository</title>
+    <meta name="description" content="Markdown renderer">
+    <meta http-equiv="x-ua-compatible" content="IE=9" > 
+    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE9" > 
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/common.css" rel="stylesheet">
+
+    <!-- js libraries -->
+    <script type="text/javascript" src="./js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="./js/marked.js"></script>
   </head>
+
   <body>
-    <!-- Sidebar area -->
+    <!-- navbar start -->
+    <div class="navibar">
+	  <ul class="navibar-menu" style="padding: 0px;">
+	    <div class="mycontainer">
+	      <li style="float:left;"><a href=""><b><span class="glyphicon glyphicon-search"></span> Local Repositry</b></a></li>
+	      <li><a href="#">about</a></li>
+	      <li><a href="#">link</a></li>
+	      <li><a href="#">home</a></li>
+	    </div>
+	  </ul>
     </div>
-    <div class="portal_sidebararea">
-      <div class ="portal_sidebararea_log">
-	Mori-site
+    <!-- navbar end -->
+
+    <ul>
+      <div class="mycontainer">
+        <li><a href="markdown.html?page=./md/test.md">test.md</a></li>
+        <li><a href="markdown.html?page=./md/test1.md">test1.md</a></li>
+	<li><a href="markdown.html?page=./md/test2.md">test2.md</a></li>
+	<li><a href="markdown.html?page=./md/test3.md">test3.md</a></li>
+	<li><a href="markdown.html?page=./md/test4.md">test4.md</a></li>
+	<li><a href="markdown.html?page=./md/test5.md">test5.md</a></li>
       </div>
-      <div class="portal_sidebararea_list">
-	<!--
-	- portal_sidebararea_menu_1
-	- portal_sidebararea_menu_2
-	- portal_sidebararea_menu_3
-	- portal_sidebararea_menu_4
-	-->
-	<div class="ac-container">
-	  <div>
-	    <input id="ac-1" name="accordion-1" type="checkbox">
-	    <label for="ac-1">Development</label>
-	    <article>
-	      <ul>
-		<li class="active">
-		  <a href="#">
-		    <strong>Menu1</strong>
-		  </a>
-		</li>
-		<li>
-		  <a href="#">
-		    <strong>Menu2</strong>
-		  </a>
-		</li>
-	      </ul>
-	    </article>
-	  </div>
-	  <div>
-	    <input id="ac-2" name="accordion-1" type="checkbox">
-	    <label for="ac-2">Attendance</label>
-	    <article>
-	      <ul>
-		<li class="active">
-		  <a href="#">
-		    <strong>SMBPF</strong>
-		  </a>
-		</li>
-		<li>
-		  <a href="#">
-		    <strong>SMBSL</strong>
-		  </a>
-		</li>
-	      </ul>
-	    </article>
-	  </div>
-	</div>
-      </div>
-    </div>
-    <!-- Navigation Area -->
-    <div class="portal_naviarea">
-      <!-- <UL>タグはUnordered Listの略で、順序のないリストを表示する際に使用します -->
-      <ul class="container portal_naviarea_list">
-	<li class="active">
-          <a href="#">
-            <strong>SMBPF</strong>
-            <span>home</span>
-          </a>
-	</li>
-	<li>
-          <a href="#">
-            <strong>SMBSL</strong>
-            <span>company</span>
-          </a>
-	</li>
-	<li class="active">
-          <a href="#">
-            <strong>SMBPB</strong>
-            <span>contact</span>
-          </a>
-	</li>
-      </ul>
-    </div>
+    </ul>
+
   </body>
 </html>

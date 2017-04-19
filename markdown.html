@@ -5,70 +5,15 @@
 
     <title>Local Repository</title>
     <meta name="description" content="Markdown renderer">
-	<meta http-equiv="x-ua-compatible" content="IE=9" > 
-	<meta http-equiv="x-ua-compatible" content="IE=EmulateIE9" > 
+    <meta http-equiv="x-ua-compatible" content="IE=9" > 
+    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE9" > 
     <!-- bootstrap -->
     <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css" rel="stylesheet">
-	<style type="text/css">
-
-	 .mycontainer {
-	   width: 900px;
-	   margin: auto;
-	 }
-
-
-	 .navibar {
-	   min-height: 40px;
-	   font-size: 14px;
-	 }
-
-	 .navibar-menu {
-	   position: fixed;
-	   width: 100%;
-	   background-color:#5D9CEC;
-	   list-style-type: none;
-	   overflow: hidden;
-	 }
-
-	 .navibar ul {
-	 }
-
-	 .navibar li {
-	   float: right;
-	 }
-
-	 .navibar a {
-	   display: block;
-	   color: white;
-	   text-align: center;
-	   padding: 10px 16px;
-	   text-decoration: none;
-	 }
-
-	 .navibar a:hover:not(.active) {
-	   background-color: #8bb8f1;
-	 }
-
-	 .navibar active {
-	   background-color: #4CAF50;
-	 }
-	</style>
+    <link rel="stylesheet" type="text/css" href="./css/common.css" rel="stylesheet">
 
     <!-- js libraries -->
     <script type="text/javascript" src="./js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="./js/marked.js"></script>
-    <script>
-     $(document).ready(function(){
-       var target = $("#markdown_content");
-       $.ajax({
-         url: target[0].attributes["src"].value,
-       }).success(function(data){
-         target.append(marked(data));
-       }).error(function(data){
-         target.append("This content failed to load.");
-       });
-     });
-    </script>
   </head>
 
   <body>
@@ -85,10 +30,48 @@
 	  </ul>
     </div>
     <!-- navbar end -->
-
     <!-- Content -->
     <div class="mycontainer">
-	  <div id="markdown_content" src="./test.md"> </div>
+      <div id ="output"></div>
     </div>
+
   </body>
+  <script>
+   $(document).ready(function(){
+     var target = $("#markdown_content");
+     $.ajax({
+       url: target[0].attributes["src"].value,
+     }).success(function(data){
+       target.append(marked(data));
+     }).error(function(data){
+       target.append("This content failed to load.");
+     });
+   });
+  </script>
+  <script>
+   // URL parameterを取得する
+   var arg = new Object;
+   var pair=location.search.substring(1).split('&');
+   for(var i=0;pair[i];i++) {
+     var kv = pair[i].split('=');
+     arg[kv[0]]=kv[1];
+   }
+   console.log(arg.page);
+
+   // 新しい div 要素を作成し、
+   // それにいくつかの内容を与えます
+   var my_div = null;
+   var newDiv = null;
+   newDiv = document.createElement("div");
+   newDiv.innerHTML = '' +
+		      '<div id="markdown_content" src="' +
+		      arg.page +
+		      '">';
+   //newDiv.innerHTML = "<h1>Hi there and greetings!</h1>";
+   console.log(newDiv.innerHTML);
+   // DOM に新しく作られた要素とその内容を追加します。
+   document.getElementById("output").appendChild(newDiv);
+   //my_div = document.getElementById("org_div1");
+   //document.body.insertBefore(newDiv, my_div);
+  </script>
 </html>

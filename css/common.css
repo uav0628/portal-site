@@ -1,0 +1,43 @@
+
+
+	 .mycontainer {
+	   width: 900px;
+	   margin: auto;
+	 }
+
+
+	 .navibar {
+	   min-height: 40px;
+	   font-size: 14px;
+	 }
+
+	 .navibar-menu {
+	   position: fixed;
+	   width: 100%;
+	   background-color:#5D9CEC;
+	   list-style-type: none;
+	   overflow: hidden;
+	 }
+
+	 .navibar ul {
+	 }
+
+	 .navibar li {
+	   float: right;
+	 }
+
+	 .navibar a {
+	   display: block;
+	   color: white;
+	   text-align: center;
+	   padding: 10px 16px;
+	   text-decoration: none;
+	 }
+
+	 .navibar a:hover:not(.active) {
+	   background-color: #8bb8f1;
+	 }
+
+	 .navibar active {
+	   background-color: #4CAF50;
+	 }
