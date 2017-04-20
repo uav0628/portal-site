@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-        <title>Markdown renderer</title>
-        <meta name="description" content="Markdown renderer">
+    <title>Local Repository</title>
+    <meta name="description" content="Markdown renderer">
 	<meta http-equiv="x-ua-compatible" content="IE=9" > 
 	<meta http-equiv="x-ua-compatible" content="IE=EmulateIE9" > 
-        <!-- bootstrap -->
-        <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css" rel="stylesheet">
 	<style type="text/css">
 
 	 .mycontainer {
@@ -54,42 +54,41 @@
 	 }
 	</style>
 
-        <!-- js libraries -->
-        <script type="text/javascript" src="/js/jquery-2.0.3.min.js"></script>
-        <script type="text/javascript" src="/js/marked.js"></script>
-        <script>
-            $(document).ready(function(){
-                var target = $("#markdown_content");
+    <!-- js libraries -->
+    <script type="text/javascript" src="./js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="./js/marked.js"></script>
+    <script>
+     $(document).ready(function(){
+       var target = $("#markdown_content");
+       $.ajax({
+         url: target[0].attributes["src"].value,
+       }).success(function(data){
+         target.append(marked(data));
+       }).error(function(data){
+         target.append("This content failed to load.");
+       });
+     });
+    </script>
+  </head>
 
-                $.ajax({
-                    url: target[0].attributes["src"].value,
-                }).success(function(data){
-                    target.append(marked(data));
-                }).error(function(data){
-                    target.append("This content failed to load.");
-                });
-            });
-        </script>
-    </head>
+  <body>
+    <!-- navbar start -->
 
-    <body>
-      <!-- navbar start -->
+    <div class="navibar">
+	  <ul class="navibar-menu" style="padding: 0px;">
+	    <div class="mycontainer">
+	      <li style="float:left;"><a href=""><b><span class="glyphicon glyphicon-search"></span> Local Repositry</b></a></li>
+	      <li><a href="#">about</a></li>
+	      <li><a href="#">link</a></li>
+	      <li><a href="#">home</a></li>
+	    </div>
+	  </ul>
+    </div>
+    <!-- navbar end -->
 
-      <div class="navibar">
-	<ul class="navibar-menu" style="padding: 0px;">
-	  <div class="mycontainer">
-	    <li style="float:left;"><a href="">about</a></li>
-	    <li><a href="#">about</a></li>
-	    <li><a href="#">link</a></li>
-	    <li><a href="#"><span class="glyphicon glyphicon-search"></span> home</a></li>
-	  </div>
-	</ul>
-      </div>
-      <!-- navbar end -->
-
-      <!-- Content -->
-      <div class="mycontainer">
-	<div id="markdown_content" src="./test.md"> </div>
-      </div>
-    </body>
+    <!-- Content -->
+    <div class="mycontainer">
+	  <div id="markdown_content" src="./test.md"> </div>
+    </div>
+  </body>
 </html>
