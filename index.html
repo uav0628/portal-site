@@ -5,9 +5,10 @@
 
     <title>Local Repository</title>
     <meta name="description" content="Markdown renderer">
-    <meta http-equiv="x-ua-compatible" content="IE=9" > 
-    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE9" > 
-    <!-- bootstrap -->
+    <meta http-equiv="x-ua-compatible" content="IE=11" >
+    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE11" >
+
+    <!-- CSS include  -->
     <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/common.css" rel="stylesheet">
 
@@ -15,9 +16,49 @@
     <script type="text/javascript" src="./js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="./js/marked.js"></script>
   </head>
+  <style>
+   .sample1{
+     padding: 0;
+     list-style: none;
+   }
+   .sample1 > li{
+     position: relative;
+     padding: 0.5em 1em 0.5em 2.3em;
+     margin-bottom:5px;
+     color: rgb(129,194,250);
+     font-size: 15px;
+     font-weight: bold;
+   }
+   .sample1 > li:after,
+   .sample1 > li:before{
+     content: "";
+     position: absolute;
+     border-radius: 50%;
+   }
+   .sample1 > li:before{
+     left: 0.2em;
+     width: 17px;
+     height: 17px;
+     background: rgba(129,194,250,0.5);
+     top: 50%;
+     -moz-transform: translateY(-50%);
+     -webkit-transform: translateY(-50%);
+     -o-transform: translateY(-50%);
+     -ms-transform: translateY(-50%);
+     transform: translateY(-50%);
+   }
 
+   .sample1 > li:after{
+     top: 1.1em;
+     left: 0.7em;
+     width: 14px;
+     height: 14px;
+     background: rgba(129,194,250,0.3);
+   }
+
+  </style>
   <body>
-    <!-- navbar start -->
+    <!-- navibar start -->
     <div class="navibar">
 	  <ul class="navibar-menu" style="padding: 0px;">
 	    <div class="mycontainer">
@@ -31,16 +72,25 @@
     </div>
     <!-- navbar end -->
 
-    <ul>
-      <div class="mycontainer">
-        <li><a href="markdown.html?page=./md/test.md">test.md</a></li>
-        <li><a href="markdown.html?page=./md/test1.md">test1.md</a></li>
-	<li><a href="markdown.html?page=./md/test2.md">test2.md</a></li>
-	<li><a href="markdown.html?page=./md/test3.md">test3.md</a></li>
-	<li><a href="markdown.html?page=./md/test4.md">test4.md</a></li>
-	<li><a href="markdown.html?page=./md/test5.md">test5.md</a></li>
-      </div>
-    </ul>
-    https://logo.squarespace.com/
+    <!-- maincontent start -->
+    <div class="mycontainer">
+      <ul class="sample1">
+        <li>Memo</li>
+        <ul>
+          <li><a href="markdown.html?page=./md/test.md">test.md</a></li>
+          <li><a href="markdown.html?page=./md/test1.md">test1.md</a></li>
+	      <li><a href="markdown.html?page=./md/test2.md">test2.md</a></li>
+	      <li><a href="markdown.html?page=./md/test3.md">test3.md</a></li>
+	      <li><a href="markdown.html?page=./md/test4.md">test4.md</a></li>
+	      <li><a href="markdown.html?page=./md/test5.md">test5.md</a></li>
+        </ul>
+
+        <li>Link</li>
+        <ul>
+          <li><a href="https://logo.squarespace.com/">https://logo.squarespace.com/</a></li>
+          <li><a href="https://www.yuu-diaryblog.com/2017/03/14/list-design/">https://www.yuu-diaryblog.com/2017/03/14/list-design/</a></li>
+        </ul>
+      </ul>
+    </div>
   </body>
 </html>
