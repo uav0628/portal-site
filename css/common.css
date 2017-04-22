@@ -13,6 +13,8 @@
    
    .navibar-menu {
      position: fixed;
+     /* 重なり対策 */
+     z-index: 1000;
      width: 100%;
      background-color:#5D9CEC;
      list-style-type: none;
