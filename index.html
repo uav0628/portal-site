@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <title>Local Repository</title>
+
     <meta name="description" content="Markdown renderer">
     <meta http-equiv="x-ua-compatible" content="IE=11" >
     <meta http-equiv="x-ua-compatible" content="IE=EmulateIE11" >
@@ -17,28 +17,108 @@
     <script type="text/javascript" src="./js/marked.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
   </head>
-  <body>
-    <!-- navibar start -->
-    <div class="navibar">
-	  <ul class="navibar-menu" style="padding: 0px;">
-	    <div class="mycontainer">
-	    <li style="float:left;"><a href="./index.html" style = "padding: 0px;"><img src="./img/logo-yoko2.png" height="40"></a></li>
-	    <li>
-	      <a href="#" class="dropbtn" onclick="myFunction()">Drodown</a>
-	      <div class="dropdown-content" id="myDropdown">
-		<a href="#">Link 1</a>
-		<a href="#">Link 2</a>
-		<a href="#">Link 3</a>
-	      </div>
-	    </li>
-	    </div>
-	  </ul>
-    </div>
-    <!-- navbar end -->
+  <style>
+   .mycontainer-main-right {
+     width: 75%;
+     float: left;
+   }
 
-    <!-- maincontent start -->
-    <div class="mycontainer">
-      <ul class="sample1">
+   .mycontainer-main-side {
+     width: 25%;
+     float: left;
+   }
+  </style>
+  <body>
+    <!-- S header -->
+    <div id ="myheader"></div>
+    <!-- E header -->
+
+    <!-- S maincontent -->
+    <div class="mycontainer mycontainer-main">
+      <!-- S mycontainer-main-right -->
+      <div class="mycontainer-main-right">
+	<ul class="sample1">
+          <li>Memo</li>
+          <ul>
+            <li><a href="markdown.html?page=./md/test.md">test.md</a></li>
+            <li><a href="markdown.html?page=./md/test1.md">test1.md</a></li>
+	    <li><a href="markdown.html?page=./md/test2.md">test2.md</a></li>
+	    <li><a href="markdown.html?page=./md/test3.md">test3.md</a></li>
+	    <li><a href="markdown.html?page=./md/test4.md">test4.md</a></li>
+	    <li><a href="markdown.html?page=./md/test5.md">test5.md</a></li>
+          </ul>
+	  
+          <li>Link</li>
+          <ul>
+	    <li><a href="http://webdesignrecipes.com/css-visual-formating-model/">http://webdesignrecipes.com/css-visual-formating-model/</a></li>
+            <li><a href="https://logo.squarespace.com/">https://logo.squarespace.com/</a></li>
+            <li><a href="https://www.yuu-diaryblog.com/2017/03/14/list-design/">https://www.yuu-diaryblog.com/2017/03/14/list-design/</a></li>
+          </ul>
+          <li>Memo</li>
+          <ul>
+            <li><a href="markdown.html?page=./md/test.md">test.md</a></li>
+            <li><a href="markdown.html?page=./md/test1.md">test1.md</a></li>
+	    <li><a href="markdown.html?page=./md/test2.md">test2.md</a></li>
+	    <li><a href="markdown.html?page=./md/test3.md">test3.md</a></li>
+	    <li><a href="markdown.html?page=./md/test4.md">test4.md</a></li>
+	    <li><a href="markdown.html?page=./md/test5.md">test5.md</a></li>
+          </ul>
+	  
+          <li>Link</li>
+          <ul>
+            <li><a href="https://logo.squarespace.com/">https://logo.squarespace.com/</a></li>
+            <li><a href="https://www.yuu-diaryblog.com/2017/03/14/list-design/">https://www.yuu-diaryblog.com/2017/03/14/list-design/</a></li>
+          </ul>
+          <li>Memo</li>
+          <ul>
+            <li><a href="markdown.html?page=./md/test.md">test.md</a></li>
+            <li><a href="markdown.html?page=./md/test1.md">test1.md</a></li>
+	    <li><a href="markdown.html?page=./md/test2.md">test2.md</a></li>
+	    <li><a href="markdown.html?page=./md/test3.md">test3.md</a></li>
+	    <li><a href="markdown.html?page=./md/test4.md">test4.md</a></li>
+	    <li><a href="markdown.html?page=./md/test5.md">test5.md</a></li>
+          </ul>
+	  
+          <li>Link</li>
+          <ul>
+            <li><a href="https://logo.squarespace.com/">https://logo.squarespace.com/</a></li>
+            <li><a href="https://www.yuu-diaryblog.com/2017/03/14/list-design/">https://www.yuu-diaryblog.com/2017/03/14/list-design/</a></li>
+          </ul>
+          <li>Memo</li>
+          <ul>
+            <li><a href="markdown.html?page=./md/test.md">test.md</a></li>
+            <li><a href="markdown.html?page=./md/test1.md">test1.md</a></li>
+	    <li><a href="markdown.html?page=./md/test2.md">test2.md</a></li>
+	    <li><a href="markdown.html?page=./md/test3.md">test3.md</a></li>
+	    <li><a href="markdown.html?page=./md/test4.md">test4.md</a></li>
+	    <li><a href="markdown.html?page=./md/test5.md">test5.md</a></li>
+          </ul>
+	  
+          <li>Link</li>
+          <ul>
+            <li><a href="https://logo.squarespace.com/">https://logo.squarespace.com/</a></li>
+            <li><a href="https://www.yuu-diaryblog.com/2017/03/14/list-design/">https://www.yuu-diaryblog.com/2017/03/14/list-design/</a></li>
+          </ul>
+          <li>Memo</li>
+          <ul>
+            <li><a href="markdown.html?page=./md/test.md">test.md</a></li>
+            <li><a href="markdown.html?page=./md/test1.md">test1.md</a></li>
+	    <li><a href="markdown.html?page=./md/test2.md">test2.md</a></li>
+	    <li><a href="markdown.html?page=./md/test3.md">test3.md</a></li>
+	    <li><a href="markdown.html?page=./md/test4.md">test4.md</a></li>
+	    <li><a href="markdown.html?page=./md/test5.md">test5.md</a></li>
+          </ul>
+          <li>Link</li>
+          <ul>
+            <li><a href="https://logo.squarespace.com/">https://logo.squarespace.com/</a></li>
+            <li><a href="https://www.yuu-diaryblog.com/2017/03/14/list-design/">https://www.yuu-diaryblog.com/2017/03/14/list-design/</a></li>
+          </ul>
+	</ul>
+      </div>
+      <!-- E mycontainer-main-right -->
+
+      <!-- S mycontainer-main-side -->
+      <div class="mycontainer-main-side">
         <li>Memo</li>
         <ul>
           <li><a href="markdown.html?page=./md/test.md">test.md</a></li>
@@ -48,14 +128,11 @@
 	  <li><a href="markdown.html?page=./md/test4.md">test4.md</a></li>
 	  <li><a href="markdown.html?page=./md/test5.md">test5.md</a></li>
         </ul>
-
-        <li>Link</li>
-        <ul>
-          <li><a href="https://logo.squarespace.com/">https://logo.squarespace.com/</a></li>
-          <li><a href="https://www.yuu-diaryblog.com/2017/03/14/list-design/">https://www.yuu-diaryblog.com/2017/03/14/list-design/</a></li>
-        </ul>
-      </ul>
+      </div>
+      <!-- E mycontainer-main-side -->
     </div>
+    <!-- E mycontainer-main -->
+
   </body>
   <script>
    /* When the user clicks on the button, 

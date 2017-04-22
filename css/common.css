@@ -3,12 +3,12 @@
      width: 720px;
      margin: auto;
    }
-   
-   
+
+   .mycontainer-main {
+       padding-top: 45px;
+   }
+
    .navibar {
-     min-height: 40px;
-     font-size: 14px;
-     box-shadow: 0 3px 5px 0 rgba(0,0,0,0.25);
    }
    
    .navibar-menu {
@@ -17,10 +17,11 @@
      background-color:#5D9CEC;
      list-style-type: none;
      overflow: hidden;
+     box-shadow: 0 3px 5px 0 rgba(0,0,0,0.25);
    }
    
    .navibar ul {
-     /* dropdown を枠を超えて表示するために利用 */
+     /* for dropdown  */
      overflow:visible;
    }
    
