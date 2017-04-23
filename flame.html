@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Flace">
+    <meta http-equiv="x-ua-compatible" content="IE=11" >
+    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE11" >
+
+    <!-- CSS include  -->
+    <!-- js libraries -->
+    <script type="text/javascript" src="./js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="./js/marked.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+  </head>
+  <style>
+
+   *, *:before, *:after {
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     -o-box-sizing: border-box;
+     -ms-box-sizing: border-box;
+     box-sizing: border-box;
+   }
+   
+   .area_border {
+     border: 1px solid;
+   }
+
+   body,html {
+     /* これがないと内包するdivが要素の高さしか持たない     */
+     /* 要素の高さが小さい場合にブラウザ一杯画面を利用しない */
+     height:100%;
+     width: 100%;
+     margin:0;
+   }
+
+   #wrapper {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     min-height: 100%;
+   }
+
+   #header {
+     width: 100%;
+     height: 60px;
+     background-color: #666;
+     position: fixed;
+   }
+
+   #container {
+     padding-top: 60px;
+     background-color: #fff000;
+   }
+
+   #footer {
+     width: 100%;
+     height: 60px;
+     background-color: #999;
+     position: absolute;
+     bottom: 0;
+   }
+
+   .mycontainer-main-right {
+     display:inline;
+     width: 75%;
+     float: left;
+   }
+
+   .mycontainer-main-side {
+     display:inline;
+     width: 25%;
+     float: left;
+   }
+
+  </style>
+
+  <body>
+    <div id="wrapper" class="area_border">
+      <div id ="header" class="area_border">
+      </div>
+      <div id ="container" class="area_border">
+	<ul><li>test</li><li>test</li><li>test</li></ul>
+	<ul><li>test</li><li>test</li><li>test</li></ul>
+	<ul><li>test</li><li>test</li><li>test</li></ul>
+	<ul><li>test</li><li>test</li><li>test</li></ul>
+	<ul><li>test</li><li>test</li><li>test</li></ul>
+	<ul><li>test</li><li>test</li><li>test</li></ul>
+	<ul><li>test</li><li>test</li><li>test</li></ul>
+	<ul><li>test</li><li>test</li><li>test</li></ul>
+	<ul><li>test</li><li>test</li><li>test</li></ul>
+	<ul><li>test</li><li>test</li><li>test</li></ul>
+	<ul><li>test</li><li>test</li><li>test</li></ul>
+	<ul><li>test</li><li>test</li><li>test</li></ul>
+      </div>
+      <div id ="footer" class="area_border">
+      </div>
+    </div>
+  </body>
+</html>
