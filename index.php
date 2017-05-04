@@ -36,7 +36,7 @@
 	    foreach($dirlist as $dirname) {
 	      echo "<li>".$dirname."</li>";
 	      echo "<ul>";
-	      $subdir = $dir."\\".$dirname;
+	      $subdir = $dir.DIRECTORY_SEPARATOR.$dirname;
 	      $filelist = getFileList($subdir);
 	      foreach($filelist as $filename) {
 		echo "<li><a href=\"markdown.html?page=./md/".$dirname."/".$filename."\">".$filename."</a></li>";
