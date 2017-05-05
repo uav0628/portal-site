@@ -31,6 +31,7 @@
 	<div class="mycontainer-main-right">
 	  <ul class="sample1">
             <?php
+        $dir = "/opt/lampp/htdocs/lab/sa/md";
 	    $dir = "C:\Apache24\htdocs\md";
 	    $dirlist = getDirList($dir);
 	    foreach($dirlist as $dirname) {
