@@ -31,8 +31,9 @@
 	<div class="mycontainer-main-right">
 	  <ul class="sample1">
             <?php
-        $dir = "/opt/lampp/htdocs/lab/sa/md";
+            $dir = "/opt/lampp/htdocs/lab/sa/md";
 	    $dir = "C:\Apache24\htdocs\md";
+            $dir = "/var/www/web/md";
 	    $dirlist = getDirList($dir);
 	    foreach($dirlist as $dirname) {
 	      echo "<li>".$dirname."</li>";
